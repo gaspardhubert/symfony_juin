@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Accueil
+    
+{% endblock %}
+
+{% block content %}
+
+<h1>Dernier auteur édité</h1>
+
+<div class="row mt-5 justify-content-center text-center">
+  <div>
+    <h3>{{ dernierAuteur.titre }}</h3>
+    <h6 class="text-muted">publié le : {{ dernierAuteur.dateDeCreation | date("d/m/Y \à H\\hi") }}</h6>
+    {% if dernierAuteur.dateDeModification is not null %}
+      <h6 class="text-muted">modifié le : {{ derneirAuteur.dateDeModification | date ("d/m/Y \à H\\hi")}}</h6>
+    {% endif %}
+
+    <h6>auteur du livre</h6>
+    <p>{{ dernierlivre.contenu | slice(0, 150) }} .... <a href="">lire la suite</p>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+<h1>Liste des produits</h1>
+
+<ul>
+  {% for produit in produits %}
+  <li>{{ produit.id }}</li>
+  <li>{{ produit.titre }}</li>
+  <li>{{ produit.description }}</li>
+  <li>{{ produit.prix }}</li>
+  {% endfor %}
+</ul>
